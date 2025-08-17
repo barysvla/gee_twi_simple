@@ -9,7 +9,7 @@ from scripts.visualization import visualize_map
 # from scripts.export import export_to_drive, export_to_asset
 
 # !GEE initialization!
-ee.Initialize(project = 'Enter the GEE project ID here')
+ee.Initialize(project = 'gee-project-twi') # Enter the GEE project ID here
 
 # !Define area of interest (AOI)!
 geometry = ee.Geometry.Rectangle([14.2, 50.0, 14.6, 50.2])
