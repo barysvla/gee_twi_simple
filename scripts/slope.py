@@ -2,13 +2,10 @@ import ee
 import geemap
 import numpy as np
 
-def compute_slope(dem, region, scale=90):
+def compute_slope_ee_image(dem):
     """
-    Výpočet sklonu terénu na základě DEM.
+    Compute terrain slope from a DEM
     """
     slope = ee.Terrain.slope(dem).rename("Slope")
-    # Geom for region in ee_to_numpy
-    #geom = slope.geometry() 
-    slope_array = geemap.ee_to_numpy(slope, region=region, bands=['Slope'], scale=90)
-    slope_array = np.squeeze(slope_array).astype(np.float64)
-    return slope_array
+    
+    return slope
