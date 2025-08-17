@@ -2,7 +2,7 @@ import ee
 import geemap
 import numpy as np
 
-def compute_slope_ee_image(dem):
+def compute_slope(dem):
     """
     Compute terrain slope from a DEM
     """
