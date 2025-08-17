@@ -1,11 +1,11 @@
 import ee
 
-def compute_flow_accumulation_hydro(dem):
+def compute_flow_accumulation(dem):
     """
-    Výpočet akumulace toku na základě DEM.
-    Zde lze implementovat vlastní metodu (např. D8 algoritmus).
+    Compute flow accumulation based on a DEM.
+    A custom method (e.g., the D8 algorithm) can be implemented here.
     """
-    # Zatím jen načítání existující vrstvy
+    # For now, just load the existing MERIT Hydro accumulation layer
     dataset_MERIT = ee.Image('MERIT/Hydro/v1_0_1')
     flowAccumulation_MERIT = dataset_MERIT.select('upa')
     
