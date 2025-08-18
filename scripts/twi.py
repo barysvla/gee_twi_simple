@@ -3,6 +3,7 @@ import ee
 def compute_twi(flow_accumulation, slope):
     """
     Compute the Topographic Wetness Index (TWI)
+    TWI = ln( acc_area / tan(slope) )
     """
     safe_slope = slope.where(slope.eq(0), 0.1)
     tan_slope = safe_slope.divide(180).multiply(ee.Number(3.14159265359)).tan()
